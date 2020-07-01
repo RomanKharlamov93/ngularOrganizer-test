@@ -32,20 +32,9 @@
         </ng-container>
       </li>
     </ul>
-    <div class="organizer__event">
-      <ul class="organizer__task-list" *ngIf="tasks.length; else noTasks">
-        <li class="task" *ngFor="let task of tasks; let i = index">
-        <span>
-          <strong>{{i + 1}}</strong>
-          {{task.title}}
-        </span>
-          <button class="btn btn-primary" (click)="removeTask(task)">Remove</button>
-        </li>
-      </ul>
-    </div>
     <ng-template #noTasks>
       <p class="text-center">
-        NoTasks
+        Нет запланированных задач
       </p>
     </ng-template>
   </div>
